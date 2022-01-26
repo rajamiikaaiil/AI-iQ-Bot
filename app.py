@@ -12,7 +12,7 @@ def home():
   return redirect(url_for('printMessage', message='Hello it me!!'))
 
 @app.route("/printMessage/<message>")
-def printMe(message):
+def printMessage(message):
   #text = "**Message from app.py**"
   return render_template('index.html',message=message)
 
