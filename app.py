@@ -6,12 +6,13 @@ from flask import Flask, redirect, url_for, render_template
 #Create an instance of the Flask class and call it as the name 'app'
 app = Flask(__name__)
 
-#app.route("/") is call to the root URL
-#Combine both / and /printMessage URLs to handle multiple routes with a single function ie printMe()
+#app.route("/") is call to the root URL and will execute the codes in the 'home' view function
 @app.route("/")
 def home():
+  #
   return redirect(url_for('printMessage', message='Hello its me!!'))
 
+#Call to the /printMessage URL and will execute the codes in the 'printMessage' view function
 @app.route("/printMessage/<message>")
 def printMessage(message):
   return render_template('index.html',message=message)
