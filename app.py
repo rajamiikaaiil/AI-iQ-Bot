@@ -1,9 +1,9 @@
 from flask import Flask, render_template
 
-pheu = Flask(__name__)
+app = Flask(__name__)
 
-@pheu.route("/")
-@pheu.route("/printMessage")
+@app.route("/")
+@app.route("/printMessage")
 def printMessage():
   text = "**Message from app.py**"
   return render_template('index.html',message=text)
