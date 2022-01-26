@@ -1,7 +1,7 @@
 #Ref: https://flask.palletsprojects.com/en/2.0.x/quickstart/
 #Ref: https://hackersandslackers.com/flask-routes/
 #Import the Flask class and related functions used in this app
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, request, redirect, url_for, render_template
 
 #Create an instance of the Flask class and call it as the name 'app'
 app = Flask(__name__)
