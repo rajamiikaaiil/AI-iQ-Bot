@@ -7,6 +7,7 @@ app = Flask(__name__)
 
 #Combine both / and /printMessage URLs to handle multiple routes with a single function ie printMe()
 @app.route("/")
+@app.route('/suhaimi')
 @app.route("/printMessage")
 def printMe():
   text = "**Message from app.py**"
