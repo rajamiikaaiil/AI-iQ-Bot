@@ -5,9 +5,10 @@ from flask import Flask, render_template
 #Create an instance of the Flask class and call it as the name 'app'
 app = Flask(__name__)
 
+#Combine both / and /printMessage URLs to handle multiple routes with a single function ie printMe()
 @app.route("/")
 @app.route("/printMessage")
-def printMessage():
+def printMe():
   text = "**Message from app.py**"
   return render_template('index.html',message=text)
 
