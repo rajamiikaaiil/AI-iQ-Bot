@@ -13,7 +13,11 @@ def home():
   return redirect(url_for('printMessage', message='Hello its me!!'))
 
 #Call to the /printMessage URL and will execute the codes in the 'printMessage' view function which will accept an argument 'message'
-@app.route("/printMessage/<message>")
+@app.route("/printMessage/<message>", methods=['GET','POST'])
 def printMessage(message):
+  if request.method == 'POST':
+    return render_template('post.html',message='This page is called through a POST method')
   #return render_template will call an HTML page to the user in this case 'index.html' which by default located in the 'templates' directory
   return render_template('index.html',message=message)
+
+  
