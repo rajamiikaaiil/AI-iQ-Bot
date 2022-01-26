@@ -1,5 +1,6 @@
 from flask import Flask, render_template
 
+#Create an instance of the Flask object and call it as the name 'app'
 app = Flask(__name__)
 
 @app.route("/")
