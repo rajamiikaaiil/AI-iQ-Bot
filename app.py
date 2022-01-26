@@ -5,13 +5,16 @@ from flask import Flask, render_template
 #Create an instance of the Flask class and call it as the name 'app'
 app = Flask(__name__)
 
+#app.route("/") is call to the root URL
 #Combine both / and /printMessage URLs to handle multiple routes with a single function ie printMe()
 @app.route("/")
-@app.route('/suhaimi')
-@app.route("/printMessage")
-def printMe():
-  text = "**Message from app.py**"
-  return render_template('index.html',message=text)
+def home():
+  return redirect(url_for('printMessage', message='Hello it me!!'))
+
+@app.route("/printMessage/<message>")
+def printMe(message):
+  #text = "**Message from app.py**"
+  return render_template('index.html',message=message)
 
 #if __name__ == "__main__":
 #    app.run(host='0.0.0.0', port=8080)
