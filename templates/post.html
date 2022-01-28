@@ -1,4 +1,7 @@
-<script>
+<html>
+  <head><title>Example of Flask and HTML Templates Interaction</title></head>
+  <body>
+    <script>
   window.watsonAssistantChatOptions = {
       integrationID: "f5960123-a1f9-4006-8273-8c38ca4db22d", // The ID of this integration.
       region: "eu-gb", // The region your integration is hosted in.
@@ -11,10 +14,6 @@
     document.head.appendChild(t);
   });
 </script>
-
-<html>
-  <head><title>Example of Flask and HTML Templates Interaction</title></head>
-  <body>
     <h1>{{message}}</h1>
   </body>
 <html>
