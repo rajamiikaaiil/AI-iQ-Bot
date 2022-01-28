@@ -1,4 +1,7 @@
-<script>
+<html>
+  <head><title>Example of Flask and HTML Templates Interaction</title></head>
+  <body>
+    <script>
   window.watsonAssistantChatOptions = {
       integrationID: "f5960123-a1f9-4006-8273-8c38ca4db22d", // The ID of this integration.
       region: "eu-gb", // The region your integration is hosted in.
@@ -12,9 +15,6 @@
   });
 </script>
 
-<html>
-  <head><title>Example of Flask and HTML Templates Interaction</title></head>
-  <body>
     <h1>Home Page .... {{message}}</h1>    
      <form method=post>
         <input type=submit value="Click to test Post Method">     
